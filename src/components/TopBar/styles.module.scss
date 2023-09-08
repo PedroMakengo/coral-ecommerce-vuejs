@@ -1,0 +1,70 @@
+.header {
+  .container {
+    width: 70% !important;
+    margin: 0 auto;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      height: 100%;
+
+      form {
+        background: #f0f0f0;
+        border-radius: 0.5rem;
+        height: 6vh;
+        display: flex;
+        align-items: center;
+        padding-left: 1rem;
+
+        i {
+          color: grey !important;
+        }
+
+        input {
+          height: 100%;
+          border: 0;
+          padding-left: 0.4rem;
+
+          &::placeholder {
+            color: gray;
+            font-size: 0.895rem;
+          }
+          &:focus {
+            outline: none;
+          }
+        }
+      }
+    }
+
+    .nav {
+      height: 100%;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .categories {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        width: 50%;
+        gap: 1rem;
+
+        a {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          text-decoration: none;
+          text-transform: capitalize;
+
+          color: gray;
+        }
+      }
+    }
+  }
+}

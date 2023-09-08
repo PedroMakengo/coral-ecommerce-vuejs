@@ -19,7 +19,8 @@
 </style>
 
 <template>
-  <!-- <HelloWorld /> -->
+  <Banner />
+
   <div class="categories">
     <div class="container">
       <div
@@ -57,6 +58,7 @@
 </template>
 
 <script lang="ts" setup>
+import Banner from "@/components/Banner/index.vue";
 import { onMounted, ref } from "vue";
 import { axiosInstance } from "@/services/api";
 

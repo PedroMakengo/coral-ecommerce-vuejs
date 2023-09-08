@@ -2,15 +2,19 @@
 import { ref } from "vue";
 
 const categories = ref(["smartphones", "laptops", "fragrances"]);
+
+const query = ref("");
 </script>
 
 <template>
-  <v-toolbar elevation="1" color="white" class="header">
+  <v-toolbar color="white" class="header">
     <div class="container">
       <v-row>
-        <v-col cols="12" md="4">
+        <v-col cols="12" md="5">
           <div class="logo">
-            <h2>Logo</h2>
+            <a href="/" class="logo-site">
+              <img src="@/assets/logo.png" alt="" />
+            </a>
             <form @submit.prevent="">
               <v-icon icon="mdi mdi-magnify"></v-icon>
               <input
@@ -21,14 +25,19 @@ const categories = ref(["smartphones", "laptops", "fragrances"]);
             </form>
           </div>
         </v-col>
-        <v-col cols="12" md="8" align="right">
+        <v-col cols="12" md="7" align="right">
           <div class="nav">
             <div class="categories">
               <a href="/" v-for="(item, index) in categories" :key="index">
                 {{ item }}
               </a>
             </div>
-            <div class="login"></div>
+            <div class="login">
+              <a href="/">
+                <v-icon icon="mdi mdi-account"></v-icon>
+                Iniciar Sessão
+              </a>
+            </div>
           </div>
         </v-col>
       </v-row>

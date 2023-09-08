@@ -1,0 +1,66 @@
+.banner {
+  background: #f2ce16;
+  background-image: url(../../assets/circle.svg);
+  background-repeat: no-repeat;
+  background-position-x: -10rem;
+  background-size: 80%;
+
+  height: auto;
+
+  .container-fluid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+
+    .image {
+      width: 100%;
+
+      img {
+        width: 110%;
+
+        transform: translateY(0.44rem);
+      }
+    }
+
+    .description {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 70%;
+
+      gap: 0.5rem;
+
+      span {
+        font-size: 0.8rem;
+        // font-style: italic;
+        font-weight: 400;
+      }
+
+      h1 {
+        font-size: 3rem;
+      }
+
+      p {
+        margin-top: 1rem;
+        font-weight: 200;
+      }
+
+      a {
+        background: #f27305;
+
+        margin-top: 1rem;
+        width: 45%;
+        height: 6vh;
+
+        border-radius: 0.5rem;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        color: #fff;
+        text-decoration: none;
+      }
+    }
+  }
+}

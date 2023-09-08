@@ -1,4 +1,5 @@
 .header {
+  border-bottom: 0.1rem solid #f0f0f0;
   .container {
     width: 70% !important;
     margin: 0 auto;
@@ -10,8 +11,14 @@
     .logo {
       display: flex;
       align-items: center;
-      gap: 1rem;
+      gap: 2rem;
       height: 100%;
+
+      .logo-site {
+        img {
+          width: 110% !important;
+        }
+      }
 
       form {
         background: #f0f0f0;
@@ -51,7 +58,7 @@
       .categories {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        width: 50%;
+        width: 60%;
         gap: 1rem;
 
         a {
@@ -62,7 +69,32 @@
           text-decoration: none;
           text-transform: capitalize;
 
-          color: gray;
+          color: #808080;
+
+          font-weight: 200;
+        }
+      }
+
+      .login {
+        display: flex;
+        gap: 1rem;
+        a {
+          background: #f2ce16;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding-inline: 0.9rem;
+          height: 6vh;
+
+          border-radius: 0.5rem;
+
+          font-size: 0.875rem;
+          font-weight: 300;
+          text-decoration: none;
+
+          color: #0000008d;
+
+          gap: 0.4rem;
         }
       }
     }

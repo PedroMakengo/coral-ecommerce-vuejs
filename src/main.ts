@@ -1,14 +1,8 @@
-/**
- * main.ts
- *
- * Bootstraps Vuetify and other plugins then mounts the App`
- */
-
 // Components
 import App from "./App.vue";
 
-// Composables
 import { createApp } from "vue";
+import VueSplide from "@splidejs/vue-splide";
 
 import "./styles/global.scss";
 // Plugins
@@ -18,4 +12,5 @@ const app = createApp(App);
 
 registerPlugins(app);
 
+app.use(VueSplide);
 app.mount("#app");

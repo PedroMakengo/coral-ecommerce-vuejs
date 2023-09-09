@@ -10,7 +10,7 @@ const product = ref<any>([]);
 
 const searchProductFromId = async () => {
   const response = await axiosInstance.get(`/products/${idProduct}`);
-  product.value = response;
+  product.value = response.data;
 };
 
 onMounted(() => {
@@ -19,9 +19,16 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="container">
-    <h1>Produto:</h1>
+  <div class="container mt-4 pt-4">
+    <v-row>
+      <v-col cols="12" md="6">
+        <v-card>
+          <img :src="product.thumbnail" alt="" />
+        </v-card>
+      </v-col>
+    </v-row>
     {{ product }}
+    <h1>Produto:</h1>
   </div>
 </template>
 

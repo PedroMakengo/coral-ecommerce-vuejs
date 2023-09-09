@@ -40,7 +40,7 @@
         <a :href="`/product/${item.id}`" class="item">
           <div
             class="image"
-            :style="`background-image: linear-gradient(#00000083, #000), url(${item.images[0]})`"
+            :style="`background-image: linear-gradient(#00000083, #000), url(${item.thumbnail})`"
           >
             <v-col align="left">
               <span class="category">{{ item.category }}</span>

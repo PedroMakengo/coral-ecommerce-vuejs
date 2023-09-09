@@ -1,15 +1,27 @@
 <script lang="ts" setup>
-import { ref } from "vue";
+import { onMounted, ref } from "vue";
 import { useRoute } from "vue-router";
+import { axiosInstance } from "@/services/api";
 
 const router = useRoute();
 
-console.log(router.params);
+const idProduct = router.params.id;
+const product = ref<any>([]);
+
+const searchProductFromId = async () => {
+  const response = await axiosInstance.get(`/products/${idProduct}`);
+  product.value = response;
+};
+
+onMounted(() => {
+  searchProductFromId();
+});
 </script>
 
 <template>
   <div class="container">
-    <h1>Produto: {{ router.params.id }}</h1>
+    <h1>Produto:</h1>
+    {{ product }}
   </div>
 </template>
 
